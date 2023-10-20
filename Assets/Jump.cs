@@ -5,6 +5,7 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     public Rigidbody2D myRigidbody;
+    public float JumpStrength;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +19,7 @@ public class Jump : MonoBehaviour
         //Setting keys to activate jump.
         if(Input.GetKeyDown(KeyCode.Space) == true)
         {
-            myRigidbody.velocity = Vector2.up * 5;
+            myRigidbody.velocity = Vector2.up * JumpStrength;
         }
         
         
